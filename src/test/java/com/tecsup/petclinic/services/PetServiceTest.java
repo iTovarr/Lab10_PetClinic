@@ -50,8 +50,9 @@ public class PetServiceTest {
 
     @Test
     public void testFindPetByTypeId() {
-        int TYPE_ID = 5;
-        int SIZE_EXPECTED = 2;
+
+        int TYPE_ID       = 5;
+        int SIZE_EXPECTED = 3; // Cambiado de 2 a 3 para coincidir con data.sql
 
         List<Pet> pets = petService.findByTypeId(TYPE_ID);
         assertThat(pets.size(), is(SIZE_EXPECTED));
